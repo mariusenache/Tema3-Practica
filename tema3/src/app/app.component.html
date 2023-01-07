@@ -1,0 +1,8 @@
+<div ng-app="myApp" ng-controller="namesCtrl">
+<h1>Games List</h1>
+<p><input nz-input [(ngModel)]="Filt" placeholder="Type in filter" id="Filt"/></p>
+<button style="align-self: center" nz-button (click)="filterGames()"><span>Filter list by input</span></button><br>
+<button style="align-self: center" nz-button (click)="sortGames()"><span>Sort games alphabetically</span></button>
+<li *ngFor="let res of result"><strong>{{res.title}}</strong><p>{{res.description}}</p></li>
+</div>
+
